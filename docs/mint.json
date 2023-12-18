@@ -76,7 +76,9 @@
         {
         "group": "🔗 Integrations",
           "pages": [
-            "integration/langsmith"
+            "integration/langsmith",
+            "integration/chainlit",
+            "integration/streamlit-mistral"
           ]
         },
         "get-started/faq"
@@ -116,7 +118,8 @@
                 "components/data-sources/discourse",
                 "components/data-sources/substack",
                 "components/data-sources/discord",
-                "components/data-sources/beehiiv"
+                "components/data-sources/beehiiv",
+                "components/data-sources/directory"
               ]
             },
             "components/data-sources/data-type-handling"
@@ -136,6 +139,7 @@
     {
       "group": "Examples",
       "pages": [
+        "examples/notebooks-and-replits",
         {
           "group": "REST API Service",
           "pages": [

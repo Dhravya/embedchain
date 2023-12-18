@@ -411,14 +411,14 @@ def validate_config(config_data):
                 Optional("config"): object,  # TODO: add particular config schema for each provider
             },
             Optional("embedder"): {
-                Optional("provider"): Or("openai", "gpt4all", "huggingface", "vertexai", "azure_openai"),
+                Optional("provider"): Or("openai", "gpt4all", "huggingface", "vertexai", "azure_openai", "google"),
                 Optional("config"): {
                     Optional("model"): Optional(str),
                     Optional("deployment_name"): Optional(str),
                 },
             },
             Optional("embedding_model"): {
-                Optional("provider"): Or("openai", "gpt4all", "huggingface", "vertexai", "azure_openai"),
+                Optional("provider"): Or("openai", "gpt4all", "huggingface", "vertexai", "azure_openai", "google"),
                 Optional("config"): {
                     Optional("model"): str,
                     Optional("deployment_name"): str,
@@ -428,6 +428,7 @@ def validate_config(config_data):
                 Optional("chunk_size"): int,
                 Optional("chunk_overlap"): int,
                 Optional("length_function"): str,
+                Optional("min_chunk_size"): int,
             },
         }
     )
